@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -17,6 +20,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     private FirebaseUser firebaseUser;
+    private GoogleSignInClient mGoogleSignInClient;
     private TextView user_auth_id, email_unverified_text;
     private Button logout_button;
     private String currentUserId;
@@ -44,6 +48,11 @@ public class ProfileActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
 
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
         user_auth_id = findViewById(R.id.user_auth_id);
         email_unverified_text = findViewById(R.id.email_unverified_text);
         logout_button = findViewById(R.id.logout_button);
@@ -54,7 +63,8 @@ public class ProfileActivity extends AppCompatActivity {
         logout_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
+                firebaseAuth.signOut();
+                mGoogleSignInClient.signOut();
                 Intent mainIntent = new Intent(ProfileActivity.this, MainActivity.class);
                 mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(mainIntent);
