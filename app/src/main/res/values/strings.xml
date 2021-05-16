@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">FirebaseAuth</string>
+    <string name="app_name_kor">파이어베이스 인증</string>
+
+    <!-- Splash 화면 -->
+    <string name="splash_title">Firebase Authentication</string>
+
+    <!-- Main 화면 -->
+    <string name="email_password_auth">계정(이메일/비밃번호) 생성</string>
+    <string name="email_auth">이메일 인증</string>
+    <string name="mobile_auth">모바일 인증</string>
+    <string name="gmail_auth">Gmail 인증</string>
+
+    <string name="register_button">회원가입</string>
+    <string name="login_button">로그인</string>
+    <string name="logout_button">로그아웃</string>
+    <string name="send_verification_button">인증번호 발송</string>
+    <string name="verify_button">인증</string>
+    <string name="verification_code">인증번호</string>
+    <string name="reset_button">초기화</string>
+</resources>

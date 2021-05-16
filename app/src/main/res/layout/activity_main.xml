@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Firebase Authentication Test"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nanumgothic_font"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/email_password_auth_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/fbutton_color_sun_flower"
+            android:paddingVertical="13dp"
+            android:paddingHorizontal="10dp"
+            android:text="@string/email_password_auth"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:fontFamily="@font/nanumgothic_font"
+            android:textStyle="bold"/>
+
+
+        <Button
+            android:id="@+id/email_auth_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/fbutton_color_alizarin"
+            android:paddingVertical="13dp"
+            android:paddingHorizontal="55dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/email_auth"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:fontFamily="@font/nanumgothic_font"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/mobile_auth_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/fbutton_color_peter_river"
+            android:paddingVertical="13dp"
+            android:paddingHorizontal="55dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/mobile_auth"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:fontFamily="@font/nanumgothic_font"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/gmail_auth_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/fbutton_color_amethyst"
+            android:paddingVertical="13dp"
+            android:paddingHorizontal="55dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/gmail_auth"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:fontFamily="@font/nanumgothic_font"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
