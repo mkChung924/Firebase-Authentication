@@ -37,7 +37,7 @@ public class SplashActivity extends AppCompatActivity {
                 moveToMainActivity();
 
             }
-        }, 1500);
+        }, 1200);
     }
 
     private void initFields(){
